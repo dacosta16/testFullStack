@@ -8,6 +8,8 @@ Vista de Todas las noticias
         <h3>{{ $noticia->Foto }}</h3>
         <h3>Editar || Borrar</h3>
 
+        <a href="{{ url('/noticia/'.$noticia->id.'/edit') }}">Editar</a>
+
         <form action="{{ url('/noticia/'.$noticia->id) }}" method="post">
             @csrf
             {{ method_field('DELETE') }}

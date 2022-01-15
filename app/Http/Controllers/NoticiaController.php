@@ -27,7 +27,7 @@ class NoticiaController extends Controller
     public function create()
     {
         //
-        return view('noticia.form');
+        return view('noticia.create');
     }
 
     /**
@@ -61,9 +61,11 @@ class NoticiaController extends Controller
      * @param  \App\Models\Noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noticia $noticia)
+    public function edit($id)
     {
         //
+        $noticia=Noticia::findOrFail($id);
+        return view('noticia.edit', compact('noticia'));
     }
 
     /**
@@ -73,9 +75,14 @@ class NoticiaController extends Controller
      * @param  \App\Models\Noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Noticia $noticia)
+    public function update(Request $request, $id)
     {
         //
+        $datosNoticia = request()->except(['_token', '_method']);
+        Noticia::where('id', '=', $id)->update($datosNoticia);
+
+        $noticia=Noticia::findOrFail($id);
+        return view('noticia.edit', compact('noticia'));
     }
 
     /**
