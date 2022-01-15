@@ -1,5 +1,5 @@
-Vista de Todas las noticias
-
+<a href="{{ url('/noticia/') }}">Google Noticias</a>
+<a href="{{ url('/noticia/create') }}">Agregar Noticia</a>
 <div class="container">
     @foreach ($noticias as $noticia)
     <div>
