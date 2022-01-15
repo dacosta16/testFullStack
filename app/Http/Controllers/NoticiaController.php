@@ -41,7 +41,8 @@ class NoticiaController extends Controller
         //
         $datosNoticia = $request->except('_token');
         Noticia::insert($datosNoticia);
-        //return response()->json($datosNoticia);
+        
+        return redirect('noticia')->with('mensaje', 'Noticia guardada exitosamente!');
     }
 
     /**
@@ -95,6 +96,6 @@ class NoticiaController extends Controller
     {
         //
         Noticia::destroy($id);
-        return redirect ('noticia');
+        return redirect('noticia')->with('mensaje', 'Noticia eliminada exitosamente!');
     }
 }

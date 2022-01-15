@@ -1,3 +1,5 @@
+<h1>{{$modo}} Noticia</h1>
+
     <label for="Titulo">Titulo de la Noticia</label>
     <input type="text" name='Titulo' id='Titulo' value="{{ isset($noticia->Titulo)?$noticia->Titulo:'' }}">
     <br>
@@ -10,7 +12,7 @@
     <input type="text" name='Foto' id='Foto' value="{{ isset($noticia->Foto)?$noticia->Foto:'' }}">
     <br>
 
-    <input type="submit" value='Guardar Noticia'>
+    <input type="submit" value='{{$modo}} Noticia'>
 
     <a href="{{ url('/noticia/') }}">Regresar</a>
     <br>

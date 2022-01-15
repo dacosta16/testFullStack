@@ -4,7 +4,7 @@
 @csrf
 {{ method_field('PATCH') }}
 
-@include('noticia.form');
+@include('noticia.form', ['modo'=>'Editar']);
 
 </form>
    
