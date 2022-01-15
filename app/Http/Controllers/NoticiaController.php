@@ -15,7 +15,8 @@ class NoticiaController extends Controller
     public function index()
     {
         //
-        
+        $datos['noticias']=Noticia::paginate(10);
+        return view('noticia.index', $datos);
     }
 
     /**
@@ -26,7 +27,7 @@ class NoticiaController extends Controller
     public function create()
     {
         //
-        return view('noticia.index');
+        return view('noticia.form');
     }
 
     /**
@@ -38,6 +39,9 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
+        $datosNoticia = $request->except('_token');
+        Noticia::insert($datosNoticia);
+        //return response()->json($datosNoticia);
     }
 
     /**
