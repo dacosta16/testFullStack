@@ -84,8 +84,10 @@ class NoticiaController extends Controller
      * @param  \App\Models\Noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticia $noticia)
+    public function destroy($id)
     {
         //
+        Noticia::destroy($id);
+        return redirect ('noticia');
     }
 }
