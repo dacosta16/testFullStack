@@ -10,7 +10,7 @@
     <div>
         <h2>{{ $noticia->Titulo }}</h2>
         <h3>{{ $noticia->Descripcion }}</h3>
-        <h3>{{ $noticia->Foto }}</h3>
+        <img src="{{ $noticia->Foto }}" alt="">
 
         <a href="{{ url('/noticia/'.$noticia->id.'/edit') }}">Editar</a>
 
