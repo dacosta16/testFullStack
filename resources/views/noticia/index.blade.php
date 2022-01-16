@@ -5,25 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    <style type="text/css">
+        i{
+            font-size: 20px !important;
+            padding: 10px;
+        }
+    </style>
     <title>Google News</title>
 </head>
 
 <body class="bg-white">
     <nav class="navbar navbar-light bg-white d-flex py-3 px-5 shadow p-3 mb-5">
     
-        <a href="{{ url('/noticia/') }}">Google Noticias</a>
+        <a href="{{ url('/noticia/') }}"><i class="fab fa-google"></i></a>
 
         
         <div class="rounded input-group-prepend">
             <input type="text" name="Buscar" placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="rounded bg-light form-control"/>
         </div>
 
-        <a href="{{ url('/noticia/create') }}">Agregar Noticia</a>
+        <a href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
         
     </nav>
 
-    <div class="alert alert-success alert-dismissible" role="alert">
+    <div class="" role="alert">
         
         @if(Session::has('mensaje'))
         {{ Session::get('mensaje') }}
@@ -57,12 +65,12 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
            
-        <a class="btn btn-primary" href="{{ url('/noticia/'.$noticia->id.'/edit') }}">Editar</a>
+        <a class="btn btn-outline-primary" href="{{ url('/noticia/'.$noticia->id.'/edit') }}"><i class="far fa-edit"></i></a>
     
             <form action="{{ url('/noticia/'.$noticia->id) }}" method="post">
                 @csrf
                 {{ method_field('DELETE') }}
-                <input type="submit" onclick="return confirm('Seguro que deseas borrar la noticia?')" value="Borrar" class="btn btn-danger">
+                <button type="submit" onclick="return confirm('Seguro que deseas borrar la noticia?')" value="Borrar" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
             </form>
 
         </div>
@@ -74,4 +82,3 @@
     
 </body>
 </html>
-
