@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
 
+
     <style type="text/css">
         i{
             font-size: 20px !important;
@@ -18,13 +19,16 @@
 </head>
 
 <body class="bg-white">
-    <nav class="navbar navbar-light bg-white d-flex py-3 px-5 shadow p-3 mb-5">
+    <nav class="navbar navbar-light bg-white py-3 px-5 shadow p-3 mb-5">
     
-        <a href="{{ url('/noticia/') }}"><i class="fab fa-google"></i></a>
+        <a href="{{ url('/noticia/') }}"><i class="fab fa-google"></i> Noticias</a>
 
-        
-        <div class="rounded input-group-prepend">
-            <input type="text" name="Buscar" placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="rounded bg-light form-control"/>
+        <div class="input-group-prepend">
+            <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
+                <option selected> Buscar temas, ubicaciones y fuentes</option>
+                <option value="1">Temas Destacados</option>
+                <option value="2">En las noticias</option>
+            </select>
         </div>
 
         <a href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
@@ -40,15 +44,24 @@
     </div>
     
     
+    
     <div class="container">
+
+        <h4 class="float-start">Titulares</h4>
+        <h5 style="color:#0097FF" class="float-end">Mas Titulares</h5> <br>
+
+        <div class="border rounded mt-5 p-3">
+            <h6 class=""> <span style="color:#0097FF">Noticias sobre el COVID-19:</span> Mira la cobertura mas reciente sobre el coronavirus</h6>
+        </div>
+        
         @foreach ($noticias as $noticia)
         
-        
-        <div class="border rounded mb-3 p-3 bg-white">
+        <div class="border rounded mt-5 mb-3 p-3 bg-white">
 
         <div class="d-flex bd-highlight">
 
             <div  class="p-2 w-100 bd-highlight">
+
                 <h4>{{ $noticia->Titulo }}</h4>
 
                 <li>
@@ -78,7 +91,9 @@
     
         </div>
         @endforeach
-    </div>  
+    </div>
+    <script src="{{ asset('js/app.js') }}"></script>  
+
     
 </body>
 </html>
