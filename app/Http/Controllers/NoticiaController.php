@@ -39,6 +39,20 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
+        $campos=[
+            'Titulo'=>'required|string|max:100',
+            'Descripcion'=>'required|string|max:100',
+            'Foto'=>'required|url|max:10000',
+        ];
+
+        $mensaje=[
+            'Titulo.required'=>'El titulo es requerido',
+            'Descripcion.required'=>'La descripcion es requerida',
+            'Foto.required' => 'La foto es requerida'
+        ];
+
+        $this->validate($request, $campos, $mensaje);
+     
         $datosNoticia = $request->except('_token');
         Noticia::insert($datosNoticia);
         
@@ -79,11 +93,27 @@ class NoticiaController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $campos=[
+            'Titulo'=>'required|string|max:100',
+            'Descripcion'=>'required|string|max:100',
+            'Foto'=>'required|url|max:10000',
+        ];
+
+        $mensaje=[
+            'Titulo.required'=>'El titulo es requerido',
+            'Descripcion.required'=>'La descripcion es requerida',
+            'Foto.required' => 'La foto es requerida'
+        ];
+
+        $this->validate($request, $campos, $mensaje);
+
         $datosNoticia = request()->except(['_token', '_method']);
         Noticia::where('id', '=', $id)->update($datosNoticia);
 
         $noticia=Noticia::findOrFail($id);
-        return view('noticia.edit', compact('noticia'));
+        //return view('noticia.edit', compact('noticia'));
+        return redirect('noticia')->with('mensaje', 'Noticia modificada exitosamente!');
     }
 
     /**
