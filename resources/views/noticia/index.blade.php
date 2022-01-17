@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
 
@@ -19,9 +20,10 @@
 </head>
 
 <body class="bg-white">
+
     <nav class="navbar navbar-light bg-white py-3 px-5 shadow p-3 mb-5">
     
-        <a href="{{ url('/noticia/') }}"><i class="fab fa-google"></i> Noticias</a>
+        <a href="{{ url('/noticia/') }}"><i class="fab fa-google "></i> Noticias</a>
 
         <div class="input-group-prepend">
             <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
@@ -35,17 +37,20 @@
         
     </nav>
 
-    <div class="" role="alert">
+    <div class="alert alert-success alert-dismissible" role="alert">
         
         @if(Session::has('mensaje'))
         {{ Session::get('mensaje') }}
         @endif
 
+        <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
     </div>
-    
-    
-    
-    <div class="container">
+        
+          
+    <div class="contenedor">
 
         <h4 class="float-start">Titulares</h4>
         <h5 style="color:#0097FF" class="float-end">Mas Titulares</h5> <br>
@@ -92,8 +97,7 @@
         </div>
         @endforeach
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>  
 
-    
 </body>
 </html>
+
