@@ -14,7 +14,6 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        //
         $datos['noticias']=Noticia::paginate(10);
         return view('noticia.index', $datos);
     }
@@ -40,8 +39,8 @@ class NoticiaController extends Controller
     {
         //
         $campos=[
-            'Titulo'=>'required|string|max:100',
-            'Descripcion'=>'required|string|max:100',
+            'Titulo'=>'required|string|max:200',
+            'Descripcion'=>'required|string|max:200',
             'Foto'=>'required|url|max:10000',
         ];
 

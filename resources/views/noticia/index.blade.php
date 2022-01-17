@@ -41,13 +41,15 @@
     
     </nav>
 
-        @if(Session::has('mensaje'))
-        {{ Session::get('mensaje') }}
-        @endif
-
         
           
     <div class="contenedor">
+    
+    <div class="text-center">
+        @if(Session::has('mensaje'))
+        {{ Session::get('mensaje') }}
+        @endif <br><br>
+    </div>
 
         <h4 class="float-start">Titulares</h4>
         <h5 class="float-end"> <a href="#" style="color:#0097FF" > Mas Titulares</a></h5> <br>
