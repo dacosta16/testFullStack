@@ -3,3 +3,10 @@
     margin: 0 auto;
 }
 
+.enlace {
+    font-size: larger;
+    color:dimgrey;
+    text-decoration: none;
+    font: bold;
+};
+

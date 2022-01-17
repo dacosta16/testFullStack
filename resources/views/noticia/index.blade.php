@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=" {{ asset('js/app.js') }} "></script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
@@ -23,7 +25,7 @@
 
     <nav class="navbar navbar-light bg-white py-3 px-5 shadow p-3 mb-5">
     
-        <a href="{{ url('/noticia/') }}"><i class="fab fa-google "></i> Noticias</a>
+        <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i> Noticias</a>
 
         <div class="input-group-prepend">
             <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
@@ -33,20 +35,18 @@
             </select>
         </div>
 
-        <a href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
+        <a class="enlace" href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
         
     </nav>
 
-    <div class="alert alert-success alert-dismissible" role="alert">
-        
+    <div class="alert alert-success" role="alert">
         @if(Session::has('mensaje'))
         {{ Session::get('mensaje') }}
         @endif
 
-        <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        
     </div>
         
           
