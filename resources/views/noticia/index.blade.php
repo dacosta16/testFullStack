@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-
-
     <style type="text/css">
         i{
             font-size: 20px !important;
@@ -23,31 +21,27 @@
 
 <body class="bg-white">
 
+
     <nav class="navbar navbar-light bg-white py-3 px-5 shadow p-3 mb-5">
     
         <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i> Noticias</a>
-
+        
         <div class="input-group-prepend">
             <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
-                <option selected> Buscar temas, ubicaciones y fuentes</option>
-                <option value="1">Temas Destacados</option>
-                <option value="2">En las noticias</option>
-            </select>
-        </div>
-
-        <a class="enlace" href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
-        
+            <option selected> Buscar temas, ubicaciones y fuentes</option>
+            <option value="1">Temas Destacados</option>
+            <option value="2">En las noticias</option>
+        </select>
+    </div>
+    
+    <a class="enlace" href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
+    
     </nav>
 
-    <div class="alert alert-success" role="alert">
         @if(Session::has('mensaje'))
         {{ Session::get('mensaje') }}
         @endif
 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
         
           
     <div class="contenedor">
@@ -97,6 +91,8 @@
         </div>
         @endforeach
     </div>
+
+    @include('sidebar')
 
 </body>
 </html>

@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="form-group container border p-3 mt-3 bg-white">
+    <div class="contenedor form-group border p-3 mt-3 bg-white">
         <h1 class="text-center">{{$modo}} Noticia</h1>
         
             @if(count($errors)>0)
