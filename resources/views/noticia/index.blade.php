@@ -23,8 +23,11 @@
 
 
     <nav class="navbar navbar-light bg-white py-3 px-5 shadow p-3 mb-5">
-    
-        <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i> Noticias</a>
+        
+        <div class="input-group-prepend">
+            @include('sidebar')
+            <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i>Noticias</a>
+        </div>
         
         <div class="input-group-prepend">
             <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
@@ -47,7 +50,7 @@
     <div class="contenedor">
 
         <h4 class="float-start">Titulares</h4>
-        <h5 style="color:#0097FF" class="float-end">Mas Titulares</h5> <br>
+        <h5 class="float-end"> <a href="#" style="color:#0097FF" > Mas Titulares</a></h5> <br>
 
         <div class="border rounded mt-5 p-3">
             <h6 class=""> <span style="color:#0097FF">Noticias sobre el COVID-19:</span> Mira la cobertura mas reciente sobre el coronavirus</h6>
@@ -86,13 +89,13 @@
             </form>
 
         </div>
-
-    
-        </div>
-        @endforeach
+        
     </div>
+    @endforeach
+</div>
 
-    @include('sidebar')
+
+
 
 </body>
 </html>

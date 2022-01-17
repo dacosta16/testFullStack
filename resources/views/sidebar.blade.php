@@ -31,7 +31,7 @@
             </div>
 
             <div class="sidebar-header">
-                <h2>Google Noticias</h2>
+                <h2></h2><br>
             </div>
 
             <ul class="list-unstyled components">
@@ -49,23 +49,27 @@
                     <a href="#"><i class="fas fa-search"></i> Busquedas Guardadas</a>
                 </li>
             </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">Descargar la App para Android <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <a href="#">Descargar la App para iOS <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li>
+                    <a href="#">Ayuda <i class="fas fa-external-link-alt"></i></a>
+                </li>
+            </ul>
             
         </nav>
 
-        <!-- Page Content  -->
-        <div id="content">
-
-            <button type="button" id="sidebarCollapse" class="btn">
-                <i class="fas fa-align-justify"></i>
-            </button>
-            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" id="sidebarCollapse" class="btn float-start">
                 <i class="fas fa-align-justify"></i>
             </button>
 
-        </div>
     </div>
 
-    <div class="overlay"></div>
+
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

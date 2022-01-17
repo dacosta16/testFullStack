@@ -30,7 +30,7 @@ a:focus {
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(236, 236, 236, 0.1);
 }
 
 .navbar-btn {
@@ -61,7 +61,6 @@ a:focus {
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 #sidebar.active {
@@ -105,7 +104,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #616161;
+    background: #ffffff;
 }
 
 #sidebar ul.components {
@@ -120,7 +119,7 @@ a:focus {
 
 #sidebar ul li a {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 0.8em;
     display: block;
 }
 
@@ -183,7 +182,7 @@ a.article:hover {
 #content {
     width: 100%;
     padding: 20px;
-    min-height: 100vh;
+    min-height: 0vh;
     transition: all 0.3s;
     position: absolute;
     top: 0;
