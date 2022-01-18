@@ -17,7 +17,7 @@ class CreateNoticiasTable extends Migration
             $table->id();
             $table->string('Titulo');
             $table->string('Descripcion');
-            $table->string('Foto');
+            $table->string('Foto', 500);
         });
     }
 

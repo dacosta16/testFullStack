@@ -42,7 +42,7 @@ class NoticiaController extends Controller
         $campos=[
             'Titulo'=>'required|string|max:200',
             'Descripcion'=>'required|string|max:200',
-            'Foto'=>'required|url|max:10000',
+            'Foto'=>'required|string|max:10000',
         ];
 
         $mensaje=[
