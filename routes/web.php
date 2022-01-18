@@ -15,7 +15,7 @@ use App\Http\Controllers\NoticiaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('noticia');
 });
 
 Route::resource('noticia', NoticiaController::class);
