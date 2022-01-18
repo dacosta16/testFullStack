@@ -14,8 +14,9 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $datos['noticias']=Noticia::paginate(10);
-        return view('noticia.index', $datos);
+
+        $datos['noticias']=Noticia::paginate(10)->sortBy('id', SORT_NUMERIC, 'id');
+       return view('noticia.index', $datos);
     }
 
     /**
