@@ -1,6 +1,24 @@
 .contenedor {
-    width: 50%;
+    width: 95%;
     margin: 0 auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .contenedor {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contenedor {
+        width: 50%;
+    }
 }
 
 .enlace {
@@ -14,3 +32,8 @@ i{
     font-size: 20px !important;
     padding: 10px;
 }
+
+.navegacion {
+    display: none;
+}
+
