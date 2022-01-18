@@ -62,7 +62,7 @@
             
         </nav>
 
-            <button type="button" id="sidebarCollapse" class="btn float-start">
+            <button title="Menu Principal" type="button" id="sidebarCollapse" class="btn float-start">
                 <i class="fas fa-align-justify"></i>
             </button>
 

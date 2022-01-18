@@ -37,7 +37,7 @@
         </select>
     </div>
     
-    <a class="enlace" href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
+    <a title="Añadir Nueva Noticia" class="enlace" href="{{ url('/noticia/create') }}"><i class="fas fa-plus-circle"></i></i></a>
     
     </nav>
 
@@ -82,12 +82,12 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
            
-        <a class="btn btn-outline-primary" href="{{ url('/noticia/'.$noticia->id.'/edit') }}"><i class="far fa-edit"></i></a>
+        <a title="Editar Noticia" class="btn btn-outline-primary" href="{{ url('/noticia/'.$noticia->id.'/edit') }}"><i class="far fa-edit"></i></a>
     
             <form action="{{ url('/noticia/'.$noticia->id) }}" method="post">
                 @csrf
                 {{ method_field('DELETE') }}
-                <button type="submit" onclick="return confirm('Seguro que deseas borrar la noticia?')" value="Borrar" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+                <button title="Borrar Noticia" type="submit" onclick="return confirm('Seguro que deseas borrar la noticia?')" value="Borrar" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
             </form>
 
         </div>
