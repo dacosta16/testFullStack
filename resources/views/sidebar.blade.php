@@ -36,27 +36,27 @@
             <ul class="list-unstyled components">
 
                 <li>
-                    <a href="#"> <i class="fas fa-globe"></i> Noticias Destacadas</a>
+                    <a href="https://news.google.com/topstories?hl=es-419&gl=US&ceid=US%3Aes-419"> <i class="fas fa-globe"></i> Noticias Destacadas</a>
                 </li>
                 <li>
-                    <a href="#"><i class="far fa-square"></i> Para ti</a>
+                    <a href="https://news.google.com/foryou?hl=es-419&gl=US&ceid=US%3Aes-419"><i class="far fa-square"></i> Para ti</a>
                 </li>
                 <li>
-                    <a href="#"> <i class="far fa-star"></i> Siguiendo</a>
+                    <a href="https://news.google.com/my/library?hl=es-419&gl=US&ceid=US%3Aes-419"> <i class="far fa-star"></i> Siguiendo</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-search"></i> Busquedas Guardadas</a>
+                    <a href="https://news.google.com/my/searches?hl=es-419&gl=US&ceid=US%3Aes-419"><i class="fas fa-search"></i> Busquedas Guardadas</a>
                 </li>
             </ul>
             <ul class="list-unstyled">
                 <li>
-                    <a href="#">Descargar la App para Android <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.magazines&referrer=news.google.com?utm_source=web&utm_medium=menu&utm_campaign=side_menu_promotion">Descargar la App para Android <i class="fas fa-external-link-alt"></i></a>
                 </li>
                 <li>
-                    <a href="#">Descargar la App para iOS <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://itunes.apple.com/US/app/apple-store/id459182288?pt=9008&ct=Web%20Side%20Promotion&mt=8&l=es-419">Descargar la App para iOS <i class="fas fa-external-link-alt"></i></a>
                 </li>
                 <li>
-                    <a href="#">Ayuda <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://support.google.com/googlenews?p=web&hl=es-419&authuser=0">Ayuda <i class="fas fa-external-link-alt"></i></a>
                 </li>
             </ul>
             

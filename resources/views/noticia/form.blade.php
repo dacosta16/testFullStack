@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>Noticias</title>
 </head>
 <body>
     <div class="contenedor form-group border p-3 mt-3 bg-white">

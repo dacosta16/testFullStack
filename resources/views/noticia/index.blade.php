@@ -10,12 +10,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-    <style type="text/css">
-        i{
-            font-size: 20px !important;
-            padding: 10px;
-        }
-    </style>
+
     <title>Google News</title>
 </head>
 
@@ -26,14 +21,11 @@
         
         <div class="input-group-prepend">
             @include('sidebar')
-            <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i>Noticias</a>
+            <a class="enlace" href="{{ url('/noticia/') }}"><i class="fab fa-google "></i>oogle Noticias</a>
         </div>
         
         <div class="input-group-prepend">
-            <select placeholder="Buscar temas, ubicaciones y fuentes" id="Buscar" class="custom-select rounded form-control"/> 
-            <option selected> Buscar temas, ubicaciones y fuentes</option>
-            <option value="1">Temas Destacados</option>
-            <option value="2">En las noticias</option>
+            <input type="search" id="form1" class="form-control" placeholder="Buscar" />
         </select>
     </div>
     
@@ -52,19 +44,21 @@
     </div>
 
         <h4 class="float-start">Titulares</h4>
-        <h5 class="float-end"> <a href="#" style="color:#0097FF" > Mas Titulares</a></h5> <br>
+        <h5 class="float-end"> <a href="https://news.google.com/topics/CAAqLAgKIiZDQkFTRmdvSUwyMHZNRFZxYUdjU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB?hl=es-419&gl=US&ceid=US%3Aes-419" style="color:#0097FF" > Mas Titulares</a></h5> <br>
 
-        <div class="border rounded mt-5 p-3">
-            <h6 class=""> <span style="color:#0097FF">Noticias sobre el COVID-19:</span> Mira la cobertura mas reciente sobre el coronavirus</h6>
-        </div>
-        
+        <a href="https://news.google.com/topics/CAAqBwgKMNDolwsw7ZGvAw?hl=es-419&gl=US&ceid=US%3Aes-419">
+            <div class="border rounded mt-5 p-3">
+                <h6 class=""> <span style="color:#0097FF">Noticias sobre el COVID-19:</span> Mira la cobertura mas reciente sobre el coronavirus</h6>
+            </div>
+        </a>
+
         @foreach ($noticias as $noticia)
         
         <div class="border rounded mt-5 mb-3 p-3 bg-white">
 
         <div class="d-flex bd-highlight">
 
-            <div  class="p-2 w-100 bd-highlight">
+            <div  class="texto-noticias p-2 w-100 bd-highlight">
 
                 <h4>{{ $noticia->Titulo }}</h4>
 
@@ -74,7 +68,7 @@
             </div>
             
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-12">
                     <img src="{{ $noticia->Foto }}"class="rounded flex-shrink-1 bd-highlight" width="100"><br>
                 </div>
             </div>
